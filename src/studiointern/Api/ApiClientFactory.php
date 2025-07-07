@@ -26,10 +26,20 @@ class ApiClientFactory
         int $timeout,
         ?string $clientType = self::CLIENT_TYPE_GUZZLE
     ): ApiClientInterface {
-        return match ($clientType) {
-            self::CLIENT_TYPE_GUZZLE => new ApiGuzzleClient($api_url, $method, $headers, $body, $timeout),
-            self::CLIENT_TYPE_CURL => new ApiCurlClient($api_url, $method, $headers, $body, $timeout),
-            default => throw new \InvalidArgumentException("Invalid API client type: $clientType"),
-        };
+
+        switch ($clientType) {
+            case self::CLIENT_TYPE_GUZZLE:
+                if (!class_exists(\GuzzleHttp\Client::class)) {
+                    throw new \RuntimeException('Guzzle HTTP client is not installed. Please install it via Composer or set the client type to "curl".');
+                }
+                return new ApiGuzzleClient($api_url, $method, $headers, $body, $timeout);
+            case self::CLIENT_TYPE_CURL:
+                if (!function_exists('curl_init')) {
+                    throw new \RuntimeException('cURL is not installed. Please install it via your system package manager or set the client type to "guzzle".');
+                }
+                return new ApiCurlClient($api_url, $method, $headers, $body, $timeout);
+            default:
+                throw new \InvalidArgumentException("Invalid API client type: $clientType");
+        }
     }
 }

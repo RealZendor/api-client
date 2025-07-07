@@ -12,7 +12,7 @@ interface ApiClientInterface
      * @param array $headers The request headers
      * @param array $body The request body
      */
-    public function __construct(string $api_url, string $method, array $headers, array $body);
+    public function __construct(string $api_url, string $method, array $headers, array $body, int $timeout);
 
     /**
      * Adds a header to the request

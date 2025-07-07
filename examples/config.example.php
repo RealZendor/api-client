@@ -76,6 +76,9 @@ return [
         /**
          * The storage path must be outside the webroot.
          * Adjust this to your needs, defaults to __DIR__ . '/storage'.
+         *
+         * Make sure to create the directory and set the correct permissions.
+         * The webserver process needs to be able to write to the directory.
          * You can ignore this if you are setting the storage to 'session'.
          */
         'storage_path'  => __DIR__ . '/storage',
