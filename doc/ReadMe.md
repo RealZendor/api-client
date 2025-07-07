@@ -118,7 +118,7 @@ $result = json_decode($response, true);
 Most endpoints require only the StudioIntern Api Key. But some require an OAuth authentication, 
 **in addition**. So don't remove the Api Key when using OAuth endpoints!
 
-You don't need to know if and endpoint requires OAuth2 authentication. The ApiConfig class 
+You don't need to know if an endpoint requires OAuth2 authentication. The ApiConfig class 
 knows and will tell you:
 
 ```php
