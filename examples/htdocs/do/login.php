@@ -12,10 +12,10 @@
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-use StudioIntern\Api\ApiConfig;
-use StudioIntern\Api\ApiOauthUser;
-use StudioIntern\Exception\UserNotLoggedInException;
-use StudioIntern\Io\RequestHelper;
+use studiointern\Api\ApiConfig;
+use studiointern\Api\ApiOauthUser;
+use studiointern\Exception\UserNotLoggedInException;
+use studiointern\Io\RequestHelper;
 
 // Initialize config
 $Config = new ApiConfig();

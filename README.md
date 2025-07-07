@@ -80,7 +80,7 @@ In the next step, we will hand the path to this file to the ApiConfig class.
 ### 1. Initialize the API Configuration
 
 ```php
-use StudioIntern\Api\ApiConfig;
+use studiointern\Api\ApiConfig;
 
 $config = new ApiConfig($path_to_config_file);
 ```

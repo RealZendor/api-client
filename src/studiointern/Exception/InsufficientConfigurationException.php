@@ -1,6 +1,6 @@
 <?php
 
-namespace StudioIntern\Exception;
+namespace studiointern\Exception;
 
 class InsufficientConfigurationException extends \Exception
 {

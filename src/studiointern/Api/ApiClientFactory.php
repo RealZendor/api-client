@@ -1,6 +1,6 @@
 <?php
 
-namespace StudioIntern\Api;
+namespace studiointern\Api;
 
 class ApiClientFactory
 {

@@ -3,8 +3,8 @@ session_start();
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use StudioIntern\Api\ApiConfig;
-use StudioIntern\Api\ApiOauthUser;
+use studiointern\Api\ApiConfig;
+use studiointern\Api\ApiOauthUser;
 
 $Config = new ApiConfig();
 $_WARNING = [];

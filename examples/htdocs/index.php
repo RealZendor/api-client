@@ -4,7 +4,7 @@ session_start();
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use StudioIntern\Api\ApiConfig;
+use studiointern\Api\ApiConfig;
 
 if (isset($_GET['do']) && $_GET['do'] === 'send_api_request') {
     $post_data = [];

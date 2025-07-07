@@ -1,10 +1,10 @@
 <?php
 
-namespace StudioIntern\Api;
+namespace studiointern\Api;
 
-use StudioIntern\Io\StorageInterface;
-use StudioIntern\Io\SessionStorage;
-use StudioIntern\Io\FileStorage;
+use studiointern\Io\StorageInterface;
+use studiointern\Io\SessionStorage;
+use studiointern\Io\FileStorage;
 
 class ApiConfig
 {

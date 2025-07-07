@@ -1,8 +1,8 @@
 <?php
 
-use StudioIntern\Api\ApiOauthUser;
-use StudioIntern\Api\ApiConfig;
-use StudioIntern\Io\RequestHelper;
+use studiointern\Api\ApiOauthUser;
+use studiointern\Api\ApiConfig;
+use studiointern\Io\RequestHelper;
 
 session_start();
 

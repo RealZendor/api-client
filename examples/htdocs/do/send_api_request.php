@@ -13,9 +13,9 @@
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-use StudioIntern\Api\ApiConfig;
-use StudioIntern\Api\ApiOauthUser;
-use StudioIntern\Exception\UserNotLoggedInException;
+use studiointern\Api\ApiConfig;
+use studiointern\Api\ApiOauthUser;
+use studiointern\Exception\UserNotLoggedInException;
 
 // Initialize config if not already done in the calling script
 if (!is_a($Config, 'StudioIntern\Api\ApiConfig')) {

@@ -1,8 +1,8 @@
 <?php
 
-namespace StudioIntern\Api;
+namespace studiointern\Api;
 
-use StudioIntern\Exception\UserNotLoggedInException;
+use studiointern\Exception\UserNotLoggedInException;
 
 class ApiOauthUser implements ApiUserInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace StudioIntern\Io;
+namespace studiointern\Io;
 
 class FileStorage implements StorageInterface
 {

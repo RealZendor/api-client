@@ -3,8 +3,8 @@
 session_start();
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use StudioIntern\Io\RequestHelper;
-use StudioIntern\Api\ApiConfig;
+use studiointern\Io\RequestHelper;
+use studiointern\Api\ApiConfig;
 
 // Initialize config if not already done in the calling script
 if (!is_a($Config, 'StudioIntern\Api\ApiConfig')) {
