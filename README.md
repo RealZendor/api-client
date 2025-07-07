@@ -7,6 +7,8 @@ Note that you are not required to use this package but also can build your own a
 
 **If you are not a StudioIntern customer, this package is probably useless for you.** See [the official StudioIntern website](https://www.studiointern.de).
 
+This project also includes a little app for testing the API calls. Just copy the htdocs directory from /examples to your webserver base dir (the htdocs dir becomes then document root).
+
 ## Installation
 
 ```bash
