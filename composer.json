@@ -1,0 +1,21 @@
+{
+    "name": "studiointern/api-client",
+    "description": "A convenient way to communicate with the StudioIntern API.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Studiointern\\ApiClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andreas Vent-Schmidt",
+            "email": "avs@vent.net"
+        }
+    ],
+    "minimum-stability": "stable"
+}
