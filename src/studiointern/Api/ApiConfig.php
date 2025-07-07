@@ -82,7 +82,7 @@ class ApiConfig
 
     public function createApiClient(string $api_url, string $method, array $headers, array $body): ApiClientInterface
     {
-        return ApiClientFactory::create($api_url, $method, $headers, $body, $this->timeout, $this->client_type);
+        return ApiClientFactory::create($api_url, $method, $headers, $body, (int) $this->timeout, $this->client_type);
     }
 
     public function setEndpoint(string $endpoint)

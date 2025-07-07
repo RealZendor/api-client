@@ -9,8 +9,12 @@
     </thead>
     <tbody>
     <?php
-    foreach ($headers as $header => $value) {
-        echo '<tr><td>' . $header . '</td><td>' . join(', ', $value) . '</td></tr>';
+    if (is_array($headers)) {
+        foreach ($headers as $header => $value) {
+            echo '<tr><td>' . $header . '</td><td>' . join(', ', $value) . '</td></tr>';
+        }
+    } else {
+        echo '<tr><td>Headers</td><td>' . $headers . '</td></tr>';
     }
     ?>
     </tbody>
