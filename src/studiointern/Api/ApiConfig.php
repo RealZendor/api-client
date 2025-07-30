@@ -8,20 +8,23 @@ use studiointern\Io\FileStorage;
 
 class ApiConfig
 {
-    public const VERSION = '1.0.0';
+    public const VERSION = '1.1.0';
     public const USER_AGENT = 'SI/API-Tester/' . self::VERSION;
     public const OAUTH_TOKEN_URL = '/oauth/token';
 
     public const ENDPOINTS = [
         '/pub/tariffs'              => ['GET', 'Preislisten', 1, ['tariffs'], false],
         '/pub/summer_courses'       => ['GET', 'Sommerkurse', 1, ['courses', 'rooms'], false],
-        '/pub/studio'               => ['GET', 'Studio-Info', 1, ['signature'], false],
+        '/pub/studio/signature'     => ['GET', 'Studio-Signatur anzeigen', 2, ['data'], false],
         '/pub/schedule'             => ['GET', 'Kursplan', 1, ['events', 'planned_events'], false],
         '/pub/plans'                => ['GET', 'Pläne', 1, ['plans'], false],
         '/pub/nextcourses'          => ['GET', 'Nächste Kurse (nur bei echtem Kalender)', 1, ['courses'], false],
         '/pub/events'               => ['GET', 'Veranstaltungen', 1, ['events'], false],
         '/pub/courses'              => ['GET', 'Kurse', 1, ['courses'], false],
+        '/pub/courses/styles'       => ['GET', 'Kursgruppen (Tanzstile) anzeigen', 2, ['data'], false],
+        '/pub/customer'             => ['GET', 'Workflow für Kunden-Anlage zeigen', 2, ['data'], true],
         '/pub/customer/register'    => ['POST', 'Neuen Kunden anlegen', 2, ['data'], false],
+        '/pub/mailcheck/'           => ['GET', 'Mailcheck', 2, ['data'], true],
         '/own/customer/'            => ['GET', 'Kundenliste (Studiobesitzer)', 2, ['data'], false],
         '/own/customer'             => ['GET', 'Kunde anzeigen (Studiobesitzer)', 2, ['data'], true],
         '/own/student/'             => ['GET', 'Schülerliste (Studiobesitzer)', 2, ['data'], false],

@@ -149,13 +149,16 @@ The API client supports the following endpoints:
 |----------|--------|-------------|---------|----------------|---------------|
 | `/pub/tariffs` | GET | Price Lists | 1 | No | none
 | `/pub/summer_courses` | GET | Summer Courses | 1 | No | none
-| `/pub/studio` | GET | Studio Info | 1 | No | none
+| `/pub/studio/signature` | GET | Studio Signature | 2 | No | none
 | `/pub/schedule` | GET | Course Schedule (general week only) | 1 | No | (see below)
 | `/pub/plans` | GET | Alternative Plans | 1 | No | none
 | `/pub/nextcourses` | GET | Next Courses (real calendar only) | 1 | No | none
 | `/pub/events` | GET | Upcoming Events (holidays) | 1 | No | none
-| `/pub/courses` | GET | Courses | 1 | No | non
+| `/pub/courses` | GET | Courses | 1 | No | none
+| `/pub/courses/styles` | GET | Course Groups (Dance Styles) | 2 | No | none
+| `/pub/customer` | GET | Show Customer Registration Workflow | 2 | Yes | none
 | `/pub/customer/register` | POST | Create New Customer | 2 | No | none
+| `/pub/mailcheck/` | GET | Mail Check | 2 | No | /[email]/[predefined_check?]
 | `/own/customer/` | GET | Customer List (Studio Owner) | 2 | Yes | none
 | `/own/customer` | GET | Show Customer (Studio Owner) | 2 | Yes | /[customer_id]
 | `/own/student/` | GET | Student List (Studio Owner) | 2 | Yes | none
