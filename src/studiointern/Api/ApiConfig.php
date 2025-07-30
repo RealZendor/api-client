@@ -8,7 +8,7 @@ use studiointern\Io\FileStorage;
 
 class ApiConfig
 {
-    public const VERSION = '1.1.0';
+    public const VERSION = '1.1.1';
     public const USER_AGENT = 'SI/API-Tester/' . self::VERSION;
     public const OAUTH_TOKEN_URL = '/oauth/token';
 
@@ -24,11 +24,11 @@ class ApiConfig
         '/pub/courses/styles'       => ['GET', 'Kursgruppen (Tanzstile) anzeigen', 2, ['data'], false],
         '/pub/customer'             => ['GET', 'Workflow für Kunden-Anlage zeigen', 2, ['data'], true],
         '/pub/customer/register'    => ['POST', 'Neuen Kunden anlegen', 2, ['data'], false],
-        '/pub/mailcheck/'           => ['GET', 'Mailcheck', 2, ['data'], true],
-        '/own/customer/'            => ['GET', 'Kundenliste (Studiobesitzer)', 2, ['data'], false],
-        '/own/customer'             => ['GET', 'Kunde anzeigen (Studiobesitzer)', 2, ['data'], true],
-        '/own/student/'             => ['GET', 'Schülerliste (Studiobesitzer)', 2, ['data'], false],
-        '/own/student'              => ['GET', 'Schüler anzeigen (Studiobesitzer)', 2, ['data'], true],
+        '/pub/mailcheck'            => ['GET', 'Mailcheck', 2, ['data'], true],
+        '/own/customer'             => ['GET', 'Kundenliste (Studiobesitzer)', 2, ['data'], false],
+        '/own/customer'             => ['GET', 'Einen Kunden anzeigen (Studiobesitzer)', 2, ['data'], true],
+        '/own/student'              => ['GET', 'Schülerliste (Studiobesitzer)', 2, ['data'], false],
+        '/own/student'              => ['GET', 'Einen Schüler anzeigen (Studiobesitzer)', 2, ['data'], true],
         '/own/account'              => ['POST', 'Kontobuchung erstellen', 2, ['data'], false],
     ];
 

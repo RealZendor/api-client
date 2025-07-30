@@ -160,11 +160,11 @@ The API client supports the following endpoints:
 | `/pub/courses/styles` | GET | Course Groups (Dance Styles) | 2 | No | none
 | `/pub/customer` | GET | Show Customer Registration Workflow | 2 | Yes | none
 | `/pub/customer/register` | POST | Create New Customer | 2 | No | none
-| `/pub/mailcheck/` | GET | Mail Check | 2 | No | /[email]/[predefined_check?]
-| `/own/customer/` | GET | Customer List (Studio Owner) | 2 | Yes | none
-| `/own/customer` | GET | Show Customer (Studio Owner) | 2 | Yes | /[customer_id]
-| `/own/student/` | GET | Student List (Studio Owner) | 2 | Yes | none
-| `/own/student` | GET | Show Student (Studio Owner) | 2 | Yes | /[student_id]
+| `/pub/mailcheck` | GET | Mail Check | 2 | No | /[email]/[predefined_check?]
+| `/own/customer` | GET | Customer List (Studio Owner) | 2 | Yes | none
+| `/own/customer` | GET | Show A Customer (Studio Owner) | 2 | Yes | /[customer_id]
+| `/own/student` | GET | Student List (Studio Owner) | 2 | Yes | none
+| `/own/student` | GET | Show A Student (Studio Owner) | 2 | Yes | /[student_id]
 | `/own/account` | POST | Create Account Entry | 2 | Yes | none
 
 The /pub/schedule has an optional parameter 'period'. See the official 
