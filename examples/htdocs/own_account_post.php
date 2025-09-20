@@ -12,12 +12,12 @@ $Config = new ApiConfig();
 $Config->setEndpoint('/own/account');
 
 $pars = [
-    'kid' => [FILTER_SANITIZE_ADD_SLASHES],
-    'pmt_type' => [FILTER_SANITIZE_ADD_SLASHES],
-    'pmt_amount' => [FILTER_SANITIZE_ADD_SLASHES],
-    'pmt_mwst' => [FILTER_SANITIZE_ADD_SLASHES],
-    'pmt_description' => [FILTER_SANITIZE_ADD_SLASHES],
-    'pmt_date' => [FILTER_SANITIZE_ADD_SLASHES],
+    'kid'               => [FILTER_SANITIZE_ADD_SLASHES],
+    'pmt_type'          => [FILTER_SANITIZE_ADD_SLASHES],
+    'pmt_amount'        => [FILTER_SANITIZE_ADD_SLASHES],
+    'pmt_vat'           => [FILTER_SANITIZE_ADD_SLASHES],
+    'pmt_description'   => [FILTER_SANITIZE_ADD_SLASHES],
+    'pmt_date'          => [FILTER_SANITIZE_ADD_SLASHES],
 ];
 
 if (isset($_POST['do']) && $_POST['do'] === 'send_api_request') {
@@ -25,6 +25,7 @@ if (isset($_POST['do']) && $_POST['do'] === 'send_api_request') {
     if (empty($post_data['pmt_date'])) {
         $post_data['pmt_date'] = date('Y-m-d');
     }
+
     include_once 'do/send_api_request.php';
 }
 
@@ -88,8 +89,8 @@ if (true === $oauth_user->isLoggedIn()) {
                     </div>
 
                     <div class="mb-3">
-                        <label for="pmt_mwst" class="form-label">VAT Rate (%)</label>
-                        <select class="form-control" id="pmt_mwst" name="pmt_mwst" value="<?php echo $_POST['pmt_mwst']; ?>" required>
+                        <label for="pmt_vat" class="form-label">VAT Rate (%)</label>
+                        <select class="form-control" id="pmt_vat" name="pmt_vat" value="<?php echo $_POST['pmt_vat']; ?>" required>
                             <option value="0">0</option>
                             <option value="7">7</option>
                             <option value="19">19</option>
